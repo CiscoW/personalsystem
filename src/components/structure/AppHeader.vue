@@ -6,7 +6,8 @@
   </span>
 
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item class="item">个人资料</el-dropdown-item>
+        <el-dropdown-item class="item" command="home">首页</el-dropdown-item>
+        <el-dropdown-item class="item" command="personalData">个人资料</el-dropdown-item>
         <el-dropdown-item class="item" command="changePassword">修改密码</el-dropdown-item>
         <el-dropdown-item class="item" command="logOut">退出登录</el-dropdown-item>
       </el-dropdown-menu>
@@ -36,6 +37,12 @@
       },
       changePassword() {
         this.$refs.ChangePassword.open();
+      },
+      personalData() {
+        this.$router.push('/personalData');
+      },
+      home() {
+        this.$router.push('/');
       }
 
     }
@@ -58,5 +65,6 @@
 
   .item {
     background-color: #fff;
+    text-align: center;
   }
 </style>

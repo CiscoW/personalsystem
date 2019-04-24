@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/Login'
 import AppTemplate from '../components/structure/AppTemplate'
-// import ChangePassword from '../components/personalcenter/ChangePassword'
+import PersonalData from '../components/personalcenter/PersonalData'
 import CustomTimeLine from '../components/timeline/CustomTimeLine'
 
 Vue.use(VueRouter);
@@ -20,11 +20,12 @@ const router = new VueRouter({
           name: "CustomTimeLine",
           component: CustomTimeLine
         },
-        // {
-        //   path: '/changePassword',
-        //   name: 'ChangePassword',
-        //   component: ChangePassword
-        // }
+        {
+          path: "/personalData",
+          name: "PersonalData",
+          component: PersonalData
+        },
+
       ]
     },
     {
